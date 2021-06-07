@@ -13,7 +13,7 @@ namespace IdentityServer
         public static IEnumerable<ApiScope> ApiScopes =>
             new List<ApiScope>
             {
-                new ApiScope("api1", "Frands API") // If you will be using this in production it is important to give your API a logical name. Developers will be using this to connect to your api though your Identity server. It should describe your api in simple terms to both developers and users.
+                new ApiScope("api1", "GG-SWT API") // If you will be using this in production it is important to give your API a logical name. Developers will be using this to connect to your api though your Identity server. It should describe your api in simple terms to both developers and users.
             };
 
         public static IEnumerable<Client> Clients =>

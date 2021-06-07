@@ -33,16 +33,6 @@ namespace IdentityServer
             .AddTestUsers(TestUsers.Users);
 
             builder.AddDeveloperSigningCredential();
-
-            //services.AddAuthentication()
-            //    .AddGoogle("Google", options =>
-            //    {
-            //        options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
-
-            //        options.ClientId = "<insert here>";
-            //        options.ClientSecret = "<insert here>";
-            //    });
-
         }
 
         public void Configure(IApplicationBuilder app)
@@ -58,7 +48,6 @@ namespace IdentityServer
 
             app.UseIdentityServer();
 
-            //uncomment, if you want to add MVC
             //app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>

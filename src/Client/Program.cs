@@ -29,7 +29,6 @@ namespace Client
                 Address = disco.TokenEndpoint,
                 ClientId = "client",
                 ClientSecret = "secret",
-
                 Scope = "api1"
             });
 
@@ -54,7 +53,7 @@ namespace Client
             else
             {
                 var content = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(JArray.Parse(content));
+                Console.WriteLine(content);
             }
 
             Console.ReadLine();

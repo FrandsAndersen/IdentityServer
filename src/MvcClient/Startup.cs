@@ -26,8 +26,6 @@ namespace MvcClient
         {
             services.AddControllersWithViews();
 
-            JwtSecurityTokenHandler.DefaultMapInboundClaims = false;
-
             services.AddAuthentication(options =>
             {
                 options.DefaultScheme = "Cookies";
@@ -47,6 +45,8 @@ namespace MvcClient
                     options.Scope.Add("profile");
                     options.GetClaimsFromUserInfoEndpoint = true;
                 });
+
+            JwtSecurityTokenHandler.DefaultMapInboundClaims = false;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
